@@ -1,0 +1,19 @@
+name: 'Cloudflare R2 Bucket Automatic Repository Backup'
+description: 'Automatically backup a Github Repository on a Cloudflare R2 Bucket"
+author: 'Rasea-M'
+inputs:
+  cloudflare-account-id:
+    description: 'Account ID'
+    required: true
+  cloudflare-r2-access-key-id:
+    description: 'R2 API Access Key'
+    required: true
+  cloudflare-r2-secret-access-key:
+    description: 'R2 API Secret Access Key
+    required: true
+  cloudflare-r2-bucket-name:
+    description: 'Bucket name'
+    required: true
+runs:
+  using: 'node20'
+  main: 'src/app.js'

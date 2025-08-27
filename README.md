@@ -29,14 +29,15 @@ jobs:
     
     - run: npm ci
     
-    - name: Run script
+    - name: Get files difference
       run: | 
         git diff --name-status HEAD~1 > FILES_CHANGED.txt
-        node src/app.js
+
+    -name: Upload differential upgrade
+        uses: Rasea-M/CFR2-BARB@latest
       env: 
-        FILES_CHANGED: $FILES_CHANGED
-        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        CLOUDFLARE_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-        CLOUDFLARE_R2_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-        CLOUDFLARE_R2_BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+        cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        cloudflare-r2-access-key-id: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+        cloudflare-r2-secret-access-key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+        cloudflare-r2-bucket-name: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
 ```
