@@ -11,6 +11,13 @@ Realistically you could run the git diff inside the same .js file, but I didn't.
 
 ```yml
 on: push
+
+env: 
+    CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    CLOUDFLARE_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+    CLOUDFLARE_R2_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+    CLOUDFLARE_R2_BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,11 +31,6 @@ jobs:
       run: | 
         git diff --name-status HEAD~1 > FILES_CHANGED.txt
 
-    -name: Upload differential upgrade
-        uses: Rasea-M/CFR2-BARB@latest
-      env: 
-        cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        cloudflare-r2-access-key-id: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-        cloudflare-r2-secret-access-key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-        cloudflare-r2-bucket-name: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+    - name: Upload differential upgrade
+      uses: Rasea-M/CFR2-BARB@master
 ```
