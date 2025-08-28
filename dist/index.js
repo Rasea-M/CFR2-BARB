@@ -37010,26 +37010,26 @@ var mime_types = __nccwpck_require__(4096);
 var promises_ = __nccwpck_require__(1943);
 ;// CONCATENATED MODULE: ./src/config.js
 const {
-    INPUT_CLOUDFLARE_ACCOUNT_ID,
-    INPUT_CLOUDFLARE_R2_ACCESS_KEY_ID,
-    INPUT_CLOUDFLARE_R2_SECRET_ACCESS_KEY,
-    INPUT_CLOUDFLARE_R2_BUCKET_NAME,
+    cloudflare_account_id,
+    cloudflare_r2_access_key_id,
+    cloudflare_r2_secret_access_key,
+    cloudflare_r2_bucket_name,
 } = process.env
 
 if (
-    !INPUT_CLOUDFLARE_ACCOUNT_ID ||
-    !INPUT_CLOUDFLARE_R2_ACCESS_KEY_ID ||
-    !INPUT_CLOUDFLARE_R2_SECRET_ACCESS_KEY ||
-    !INPUT_CLOUDFLARE_R2_BUCKET_NAME
+    !cloudflare_account_id ||
+    !cloudflare_r2_access_key_id ||
+    !cloudflare_r2_secret_access_key ||
+    !cloudflare_r2_bucket_name
 ) {
     console.log(process.env)
     throw new Error('Missing environment variables.')
 }
 
-const cloudflareAccountId = INPUT_CLOUDFLARE_ACCOUNT_ID
-const cloudflareR2AccessKeyId = INPUT_CLOUDFLARE_R2_ACCESS_KEY_ID
-const cloudflareR2SecretAccessKey = INPUT_CLOUDFLARE_R2_SECRET_ACCESS_KEY
-const cloudflareR2BucketName = INPUT_CLOUDFLARE_R2_BUCKET_NAME
+const cloudflareAccountId = cloudflare_account_id
+const cloudflareR2AccessKeyId = cloudflare_r2_access_key_id
+const cloudflareR2SecretAccessKey = cloudflare_r2_secret_access_key
+const cloudflareR2BucketName = cloudflare_r2_bucket_name
 
 
 
