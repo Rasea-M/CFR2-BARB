@@ -1,5 +1,5 @@
 name: 'Cloudflare R2 Bucket Automatic Repository Backup'
-description: 'Automatically backup a Github Repository on a Cloudflare R2 Bucket"
+description: 'Automatically backup a Github Repository on a Cloudflare R2 Bucket'
 author: 'Rasea-M'
 inputs:
   cloudflare-account-id:
