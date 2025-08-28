@@ -37022,6 +37022,7 @@ if (
     !INPUT_CLOUDFLARE_R2_SECRET_ACCESS_KEY ||
     !INPUT_CLOUDFLARE_R2_BUCKET_NAME
 ) {
+    console.log(process.env)
     throw new Error('Missing environment variables.')
 }
 
