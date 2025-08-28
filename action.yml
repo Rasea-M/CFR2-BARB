@@ -5,7 +5,7 @@ inputs:
   cloudflare_account_id:
     description: 'Account ID'
     required: true
-  cloudflare-r2_access_key_id:
+  cloudflare_r2_access_key_id:
     description: 'R2 API Access Key'
     required: true
   cloudflare_r2_secret_access_key:
