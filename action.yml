@@ -9,7 +9,7 @@ inputs:
     description: 'R2 API Access Key'
     required: true
   cloudflare-r2-secret-access-key:
-    description: 'R2 API Secret Access Key
+    description: 'R2 API Secret Access Key'
     required: true
   cloudflare-r2-bucket-name:
     description: 'Bucket name'
