@@ -20,15 +20,6 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Setup node with cache
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
-        cache-dependency-path: ./package-lock.json
-    
-    - run: npm ci
-    
     - name: Get files difference
       run: | 
         git diff --name-status HEAD~1 > FILES_CHANGED.txt

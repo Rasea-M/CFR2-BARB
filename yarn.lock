@@ -1067,6 +1067,11 @@
 "@types/uuid@^9.0.1":
   version "9.0.8"
 
+"@vercel/ncc@^0.38.3":
+  version "0.38.3"
+  resolved "https://registry.npmjs.org/@vercel/ncc/-/ncc-0.38.3.tgz"
+  integrity sha512-rnK6hJBS6mwc+Bkab+PGPs9OiS0i/3kdTO+CkI8V0/VrW3vmz7O2Pxjw/owOlmo6PKEIxRSeZKv/kuL9itnpYA==
+
 acorn-walk@^8.1.1:
   version "8.3.4"
   resolved "https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.3.4.tgz"
