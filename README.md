@@ -13,10 +13,10 @@ Realistically you could run the git diff inside the same .js file, but I didn't.
 on: push
 
 env: 
-    CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-    CLOUDFLARE_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
-    CLOUDFLARE_R2_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
-    CLOUDFLARE_R2_BUCKET_NAME: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
+    cloudflare_account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    cloudflare_r2_access_key_id: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+    cloudflare_r2_secret_access_key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+    cloudflare_r2_bucket_name: ${{ secrets.CLOUDFLARE_R2_BUCKET_NAME }}
 
 jobs:
   build:
